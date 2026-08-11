@@ -32,7 +32,15 @@ A Dockerized monorepo technical task with a React frontend, FastAPI backend, and
 ├── frontend/
 │   ├── Dockerfile
 │   ├── src/
-│   │   ├── api/
+│   │   ├── components/
+│   │   │   ├── UsersTable.css
+│   │   │   └── UsersTable.tsx
+│   │   ├── dtos/
+│   │   │   └── user.dto.ts
+│   │   ├── hooks/
+│   │   │   └── useUsers.ts
+│   │   ├── services/
+│   │   │   └── user.service.ts
 │   │   ├── App.tsx
 │   │   ├── main.tsx
 │   │   └── router.ts

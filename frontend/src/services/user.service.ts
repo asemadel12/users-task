@@ -1,22 +1,16 @@
-export interface User {
-  id: number
-  name: string
-  email: string
-  created_at: string
-  updated_at: string
-}
+import type { UserDto } from '../dtos/user.dto'
 
 const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:8000').replace(
   /\/$/,
   '',
 )
 
-export async function fetchUsers(): Promise<User[]> {
+export async function getUsers(): Promise<UserDto[]> {
   const response = await fetch(`${API_URL}/users`)
 
   if (!response.ok) {
     throw new Error('Unable to fetch users')
   }
 
-  return response.json() as Promise<User[]>
+  return response.json() as Promise<UserDto[]>
 }
