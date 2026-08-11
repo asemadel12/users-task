@@ -1,3 +1,123 @@
 #root {
-  text-align: center;
+  width: 100%;
+}
+
+.app {
+  width: min(720px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  line-height: 1;
+}
+
+.intro {
+  margin: 1rem 0 1.75rem;
+  color: #475569;
+}
+
+button {
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.15rem;
+  color: #ffffff;
+  background: #2563eb;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.results {
+  margin-top: 2rem;
+}
+
+.status,
+.error {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #e2e8f0;
+}
+
+.error {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.user-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.user-card {
+  padding: 1.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 6%);
+}
+
+.user-card h2 {
+  margin: 0 0 1.25rem;
+  color: #0f172a;
+}
+
+.user-card dl {
+  margin: 0;
+}
+
+.user-card dl div {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.user-card dt {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.user-card dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 2.5rem 0;
+  }
+
+  .user-card dl div {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
 }
