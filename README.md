@@ -65,6 +65,9 @@ On startup, the backend automatically creates the `users` table and inserts any 
 
 - `Demo User` (`demo@example.com`)
 - `Sample User` (`sample@example.com`)
+- `Alice Johnson` (`alice@example.com`)
+- `Bob Smith` (`bob@example.com`)
+- `Carol Williams` (`carol@example.com`)
 
 Initialization is idempotent, so normal restarts do not create duplicates or delete existing data.
 
