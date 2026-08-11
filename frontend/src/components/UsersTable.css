@@ -1,4 +1,4 @@
-.table-wrapper {
+.users-table-wrapper {
   overflow-x: auto;
   border: 1px solid #cbd5e1;
   border-radius: 0.75rem;
@@ -6,14 +6,14 @@
   box-shadow: 0 8px 24px rgb(15 23 42 / 6%);
 }
 
-table {
+.users-table {
   width: 100%;
   min-width: 850px;
   border-collapse: collapse;
   text-align: left;
 }
 
-caption {
+.users-table caption {
   padding: 1rem 1.25rem;
   color: #0f172a;
   font-size: 1.1rem;
@@ -21,14 +21,14 @@ caption {
   text-align: left;
 }
 
-th,
-td {
+.users-table th,
+.users-table td {
   padding: 0.85rem 1.25rem;
   border-top: 1px solid #e2e8f0;
   white-space: nowrap;
 }
 
-thead th {
+.users-table thead th {
   color: #475569;
   background: #f1f5f9;
   font-size: 0.78rem;
@@ -36,10 +36,10 @@ thead th {
   text-transform: uppercase;
 }
 
-tbody th {
+.users-table tbody th {
   color: #2563eb;
 }
 
-tbody tr:hover {
+.users-table tbody tr:hover {
   background: #f8fafc;
 }

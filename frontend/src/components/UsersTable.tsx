@@ -14,8 +14,8 @@ function formatDate(value: string) {
 
 export function UsersTable({ users }: UsersTableProps) {
   return (
-    <div className="table-wrapper">
-      <table>
+    <div className="users-table-wrapper">
+      <table className="users-table">
         <caption>Users</caption>
         <thead>
           <tr>
