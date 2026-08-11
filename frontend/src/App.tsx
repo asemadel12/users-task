@@ -53,34 +53,38 @@ function App() {
         )}
 
         {isSuccess && users.length > 0 && (
-          <div className="user-list">
-            {users.map((user) => (
-              <article className="user-card" key={user.id}>
-                <h2>{user.name}</h2>
-                <dl>
-                  <div>
-                    <dt>ID</dt>
-                    <dd>{user.id}</dd>
-                  </div>
-                  <div>
-                    <dt>Name</dt>
-                    <dd>{user.name}</dd>
-                  </div>
-                  <div>
-                    <dt>Email</dt>
-                    <dd>{user.email}</dd>
-                  </div>
-                  <div>
-                    <dt>Created at</dt>
-                    <dd>{formatDate(user.created_at)}</dd>
-                  </div>
-                  <div>
-                    <dt>Updated at</dt>
-                    <dd>{formatDate(user.updated_at)}</dd>
-                  </div>
-                </dl>
-              </article>
-            ))}
+          <div className="table-wrapper">
+            <table>
+              <caption>Users</caption>
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Created at</th>
+                  <th scope="col">Updated at</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map((user) => (
+                  <tr key={user.id}>
+                    <th scope="row">{user.id}</th>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>
+                      <time dateTime={user.created_at}>
+                        {formatDate(user.created_at)}
+                      </time>
+                    </td>
+                    <td>
+                      <time dateTime={user.updated_at}>
+                        {formatDate(user.updated_at)}
+                      </time>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
       </section>
