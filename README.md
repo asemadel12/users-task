@@ -13,12 +13,21 @@ A Dockerized monorepo technical task with a React frontend, FastAPI backend, and
 ```text
 .
 ├── backend/
+│   ├── controllers/
+│   │   └── user_controller.py
+│   ├── schemas/
+│   │   └── user_schema.py
+│   ├── seeds/
+│   │   └── users.py
+│   ├── services/
+│   │   └── user_service.py
 │   ├── Dockerfile
+│   ├── config.py
 │   ├── db.py
 │   ├── main.py
 │   ├── model.py
-│   ├── schema.py
 │   ├── pyproject.toml
+│   ├── startup.py
 │   └── uv.lock
 ├── frontend/
 │   ├── Dockerfile
